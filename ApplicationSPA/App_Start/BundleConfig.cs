@@ -26,6 +26,19 @@ namespace ApplicationSPA
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+
+            bundles.Add(new ScriptBundle("~/bundles/app")
+                .Include(
+                "~/Scripts/angular.min.js",
+                "~/Scripts/App/App.js",
+
+                // Controllers
+                "~/Scripts/App/Controllers/HomeController.js"
+
+
+                )
+            );
         }
     }
 }
