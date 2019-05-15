@@ -7,6 +7,7 @@ Init project (.NET MVC/AngularJS) Application
 * nice urls with enabled html5mode 
 * Using partial Views 
 * Using NPM to install client side dependencies
+* dynamic title with angularJS instead of ViewBag
 
 
 ```
