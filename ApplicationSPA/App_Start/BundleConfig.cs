@@ -30,11 +30,15 @@ namespace ApplicationSPA
 
             bundles.Add(new ScriptBundle("~/bundles/app")
                 .Include(
+                // Libraries
                 "~/Scripts/angular.min.js",
                 "~/Scripts/App/App.js",
+                "~/Scripts/Lib/@uirouter/angularjs/release/angular-ui-router.js",
 
                 // Controllers
-                "~/Scripts/App/Controllers/HomeController.js"
+                "~/Scripts/App/Controllers/HomeController.js",
+                "~/Scripts/App/Controllers/AboutController.js",
+                "~/Scripts/App/Controllers/ContactController.js"
 
 
                 )
