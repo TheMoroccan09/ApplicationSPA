@@ -15,13 +15,19 @@ namespace ApplicationSPA.Controllers
 
         public ActionResult About()
         {
-            // TODO otmohimi add test ajax request
-            return PartialView();
+            return this.getView();
         }
 
         public ActionResult Contact()
         {
-            return PartialView();
+            return this.getView();
+        }
+        // TODO otmohimi move this to an Interface controller
+        private ActionResult getView() {
+            if (Request.IsAjaxRequest())
+                return PartialView();
+
+            return View("~/Views/Home/Index.cshtml");
         }
     }
 }
