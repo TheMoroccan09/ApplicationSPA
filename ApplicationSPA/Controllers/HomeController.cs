@@ -15,16 +15,13 @@ namespace ApplicationSPA.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            // TODO otmohimi add test ajax request
+            return PartialView();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
-
-            return View();
+            return PartialView();
         }
     }
 }

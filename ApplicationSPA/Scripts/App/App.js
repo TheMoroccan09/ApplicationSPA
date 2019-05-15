@@ -13,13 +13,14 @@ app.config(function ($stateProvider, $locationProvider) {
             template: '<h1> Template page home</h1>'
         })
         .state('about', {
-            url: '/about',
-            template: '<h1> Template page about</h1>',
-            controller: 'AboutController'
+            url: '/Home/About',
+            templateUrl: '/Home/About',
         })
         .state('contact', {
-            url: '/contact',
-            template: '<h1> Template page Contact</h1>'
+            url: '/Home/Contact',
+            templateUrl: '/Home/Contact'
         })
+
+    $locationProvider.html5Mode(true);
 });
 
