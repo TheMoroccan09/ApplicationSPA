@@ -33,7 +33,7 @@ namespace ApplicationSPA
                 // Libraries
                 "~/Scripts/angular.min.js",
                 "~/Scripts/App/App.js",
-                "~/Scripts/Lib/@uirouter/angularjs/release/angular-ui-router.js",
+                "~/node_modules/@uirouter/angularjs/release/angular-ui-router.min.js",
 
                 // Controllers
                 "~/Scripts/App/Controllers/HomeController.js",
