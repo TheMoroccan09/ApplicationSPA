@@ -1,5 +1,11 @@
 ﻿var app = angular.module('App', ['ui.router']);
 
+
+app.config(['$httpProvider', function ($httpProvider) {
+    $httpProvider.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
+}]);
+
+// Routing 
 app.config(function ($stateProvider, $locationProvider) {
     $stateProvider
         .state('home', {
@@ -16,3 +22,4 @@ app.config(function ($stateProvider, $locationProvider) {
             template: '<h1> Template page Contact</h1>'
         })
 });
+
