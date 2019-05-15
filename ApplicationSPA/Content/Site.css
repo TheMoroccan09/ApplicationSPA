@@ -1,13 +1,20 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿/*Structure*/
+header {
+    height: 70px;
+    padding: 10px 20px;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding: 15px;
+    padding-top: 80px;
+    min-height: calc(100vh - 80px); /*160px = header + footer height*/
 }
+
+footer { height: 80px;}
+/*// ----------- ---------------------------------------------------------*/
+
+
 
 /* Override the default bootstrap behavior where horizontal description lists 
    will truncate terms that are too long to fit in the left column 
@@ -22,3 +29,6 @@ select,
 textarea {
     max-width: 280px;
 }
+
+
+
