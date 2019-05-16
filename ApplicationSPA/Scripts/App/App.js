@@ -11,18 +11,18 @@ app.config(['$stateProvider', '$locationProvider',
         $stateProvider
             .state('home', {
                 url: '/',
-                template: '<h1> Template page home</h1>', // TODO use templateUrl instead
+                templateUrl: '/Home/Index',
                 data: { title: 'Home'}
             })
             .state('about', {
                 url: '/Home/About',
                 templateUrl: '/Home/About',
-                data: {title : 'About'}
+                data: { title : 'About'}
             })
             .state('contact', {
                 url: '/Home/Contact',
                 templateUrl: '/Home/Contact',
-                data: {title: 'Contact'}
+                data: { title: 'Contact'}
             })
 
         $locationProvider.html5Mode(true);
@@ -34,8 +34,10 @@ app.config(['$stateProvider', '$locationProvider',
 // update title dynamically
 app.run(['$rootScope', '$transitions','$state',
   function ($rootScope, $transitions, $state) {
-    $rootScope.title = 'My Super app'
+    $rootScope.title = 'My Super app' // init title 
 
+
+    // Set title 
     $transitions.onSuccess({}, function () {
         $rootScope.title = $state.$current.data.title
     })

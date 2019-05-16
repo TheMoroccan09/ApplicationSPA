@@ -10,7 +10,7 @@ namespace ApplicationSPA.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return this.getView();
         }
 
         public ActionResult About()
@@ -27,7 +27,8 @@ namespace ApplicationSPA.Controllers
             if (Request.IsAjaxRequest())
                 return PartialView();
 
-            return View("~/Views/Home/Index.cshtml");
+            return View("~/Views/Home/Empty.cshtml");
         }
+
     }
 }
